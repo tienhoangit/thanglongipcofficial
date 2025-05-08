@@ -1,0 +1,254 @@
+ipc\src\index.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thăng Long IPC - 20 năm kinh nghiệm trong sản xuất và thi công cọc bê tông, cung cấp giải pháp nền móng vững chắc.">
+    <meta name="keywords" content="Thăng Long IPC, cọc bê tông, thi công ép cọc, xây dựng công nghiệp">
+    <title>Thăng Long IPC - Trang Chủ</title>
+    
+    <!-- Giữ lại favicon -->
+    <link rel="icon" href="assets/images/favicon/favicon.ico">
+    
+    <!-- Thêm Tailwind và fonts mới -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Thăng Long IPC - Công ty CP Sản xuất Công nghiệp & Xây dựng">
+    <meta property="og:description" content="Gần 20 năm kinh nghiệm trong sản xuất, thi công cọc bê tông, xử lý nền móng và xây dựng công nghiệp">
+    <meta property="og:url" content="https://thanglongipc.com">
+    
+    <!-- Schema.org Markup - Giữ lại thông tin schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Thăng Long IPC",
+      "description": "Công ty CP Sản xuất Công nghiệp và Xây dựng Thăng Long",
+      "url": "https://thanglongipc.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "024.39517151",
+        "email": "thanglongipc@gmail.com",
+        "contactType": "customer service"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7B/D TTTC2, Xuân Tảo",
+        "addressLocality": "Bắc Từ Liêm",
+        "addressRegion": "Hà Nội",
+        "addressCountry": "VN"
+      }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --color-primary: #27409A;
+            --color-secondary: #F48332;
+            --color-tertiary: #A2A2D1;
+            --color-accent: #FBC8A0;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .banner {
+            background-image: url('assets/images/company/san-xuat-coc-btct.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        @media (min-width: 768px) {
+            .banner {
+                height: 700px;
+            }
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2.5rem;
+            color: var(--color-primary);
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--color-secondary);
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--color-accent);
+            background-color: white;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        .cta-button {
+            background-color: var(--color-secondary);
+            color: white;
+            padding: 0.75rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .cta-button:hover {
+            background-color: #e07b2e;
+            transform: scale(1.05);
+        }
+        .view-more-button {
+            background-color: var(--color-secondary);
+            color: white;
+            padding: 0.75rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .view-more-button:hover {
+            background-color: #e07b2e;
+            transform: scale(1.05);
+        }
+        .nav-link {
+            position: relative;
+            color: var(--color-primary);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-secondary);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .header {
+            background-color: var(--color-primary);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header h1, .header a {
+            color: white;
+        }
+        .header .nav-link:hover {
+            color: var(--color-secondary);
+        }
+    </style>
+</head>
+<body class="tailwind-design">
+    <!-- Header placeholder để dùng với components.js -->
+    <div id="header-placeholder"></div>
+    <script src="assets/js/components.js"></script>
+
+    <main>
+        <!-- Banner -->
+        <section class="banner">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">Kiến tạo nền móng vững chắc – Dựng xây niềm tin dài lâu</h2>
+                <p class="text-lg md:text-xl mb-8">Chào mừng đến với Thăng Long IPC – 20 năm kinh nghiệm mang đến giải pháp móng vững chắc, an toàn và tiết kiệm chi phí cho nhà đầu tư.</p>
+                <a href="#" class="cta-button inline-block">Khám Phá Dịch Vụ</a>
+            </div>
+        </section>
+
+        <!-- Highlights -->
+        <section class="py-16 bg-[var(--color-tertiary)] bg-opacity-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center section-title">Điểm Nổi Bật</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div class="card rounded-xl p-6 text-center">
+                        <img src="assets/images/company/giai-phap-tong-the.jpg" alt="Giải pháp tổng thể" class="mx-auto mb-4 h-16 object-cover rounded" loading="lazy">
+                        <h3 class="text-xl font-semibold mb-2 text-[var(--color-primary)]">Giải Pháp Tổng Thể</h3>
+                        <p class="text-gray-600">Sản xuất và ép cọc BTCT, cung cấp & ép cọc PHC, gia công kết cấu thép.</p>
+                    </div>
+                    <div class="card rounded-xl p-6 text-center">
+                        <img src="assets/images/company/cong-nghe-tien-tien.jpg" alt="Công nghệ tiên tiến" class="mx-auto mb-4 h-16 object-cover rounded" loading="lazy">
+                        <h3 class="text-xl font-semibold mb-2 text-[var(--color-primary)]">Công Nghệ Tiên Tiến</h3>
+                        <p class="text-gray-600">Robot ZYJ (200–680 tấn), máy ép thủy lực 60–170 tấn.</p>
+                    </div>
+                    <div class="card rounded-xl p-6 text-center">
+                        <img src="assets/images/company/co-so-ha-tang.jpg" alt="Cơ sở hạ tầng mạnh" class="mx-auto mb-4 h-16 object-cover rounded" loading="lazy">
+                        <h3 class="text-xl font-semibold mb-2 text-[var(--color-primary)]">Cơ Sở Hạ Tầng Mạnh</h3>
+                        <p class="text-gray-600">Nhà xưởng 4.000 m², kho kín 1.000 m², trạm trộn bê tông 25 m³/h.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notable Projects -->
+        <section class="py-16 bg-[var(--color-accent)] bg-opacity-30">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center section-title">Dự Án Tiêu Biểu</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                    <div class="card rounded-xl overflow-hidden">
+                        <img src="assets/images/projects/hai-an.jpg" alt="Kho lạnh Hải An" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-[var(--color-primary)]">Kho lạnh Hải An – Hải Phòng</h3>
+                            <p class="text-gray-600 mb-2">2021–2022: Cọc PHC D300/D400</p>
+                            <p class="text-gray-600">Dự án kho lạnh công nghiệp, thể hiện khả năng thi công nền móng ổn định cho công trình đặc thù.</p>
+                        </div>
+                    </div>
+                    <div class="card rounded-xl overflow-hidden">
+                        <img src="assets/images/projects/thanh-cong-b.jpg" alt="Trường Thành Công B" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-[var(--color-primary)]">Trường Tiểu học Thành Công B – Hà Nội</h3>
+                            <p class="text-gray-600 mb-2">2020: Cọc BTCT 300×300 mm</p>
+                            <p class="text-gray-600">Thi công trong khu dân cư mật độ cao, đảm bảo an toàn và tiến độ khai giảng.</p>
+                        </div>
+                    </div>
+                    <div class="card rounded-xl overflow-hidden">
+                        <img src="assets/images/projects/stavian-mp.jpg" alt="Nhà máy Stavian MP" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-[var(--color-primary)]">Nhà máy Stavian MP – Hưng Yên</h3>
+                            <p class="text-gray-600 mb-2">2022: Cọc BTCT 250×250 mm</p>
+                            <p class="text-gray-600">Sản xuất và lắp đặt cho nhà máy công nghiệp quy mô lớn.</p>
+                        </div>
+                    </div>
+                    <div class="card rounded-xl overflow-hidden">
+                        <img src="assets/images/projects/cuc-quan-y.jpg" alt="Trụ sở Cục Quân Y" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-[var(--color-primary)]">Trụ sở Cục Quân Y – Bộ Quốc Phòng</h3>
+                            <p class="text-gray-600 mb-2">2014: Cọc BTCT 300×300 mm</p>
+                            <p class="text-gray-600">Công trình hành chính cấp quốc phòng với tiêu chuẩn an ninh và chất lượng nghiêm ngặt.</p>
+                        </div>
+                    </div>
+                    <div class="card rounded-xl overflow-hidden">
+                        <img src="assets/images/projects/spk.jpg" alt="Nhà máy SPK" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-[var(--color-primary)]">Nhà máy SPK – Hải Dương</h3>
+                            <p class="text-gray-600 mb-2">2017: Cọc BTCT 200×200 mm</p>
+                            <p class="text-gray-600">Dự án mở rộng vùng, khẳng định năng lực triển khai đa địa bàn.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 text-center">
+                    <a href="pages/projects/index.html" class="view-more-button inline-block">Xem Thêm</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer placeholder để dùng với components.js -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Giữ lại script ban đầu -->
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>

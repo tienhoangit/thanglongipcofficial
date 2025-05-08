@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /components/
+
+# Sitemap location
+Sitemap: https://thanglongipc.com/sitemap.xml

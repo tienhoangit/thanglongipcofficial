@@ -1,0 +1,223 @@
+/* Hero Banner Styles */
+.hero-banner {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    margin-top: -80px;
+    padding-top: 80px;
+    background-image: linear-gradient(to bottom, rgba(39, 64, 154, 0.6), rgba(39, 64, 154, 0.8)), 
+                      url('https://images.unsplash.com/photo-1622021142947-a7a7e9b17483?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: calc(var(--spacing-xl) + 80px) var(--container-padding) var(--spacing-xl);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-banner .container {
+    color: var(--color-background);
+}
+
+.hero-banner h1 {
+    color: var(--color-background);
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-banner p {
+    color: var(--color-background);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.95;
+}
+
+.hero-banner .btn {
+    padding: 0.75rem 2.5rem;
+    border-radius: var(--border-radius-full);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.hero-banner .btn:hover {
+    transform: scale(1.05);
+}
+
+/* Section Titles */
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-secondary);
+}
+
+/* Welcome Message */
+.welcome-message {
+    background-color: var(--color-primary-light);
+    background-opacity: 0.2;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+}
+
+.welcome-message p {
+    color: var(--color-text);
+    font-size: var(--font-size-lg);
+    margin: 0;
+}
+
+/* Core Values Updated Cards */
+.core-values .grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacing-md);
+}
+
+@media (min-width: 576px) {
+    .core-values .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .core-values .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .core-values .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.core-values .card {
+    text-align: center;
+    padding: var(--spacing-lg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-secondary-light);
+}
+
+.core-values .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.core-values .card h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.core-values .card p {
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* Team Section Styling */
+.team-section {
+    margin-top: var(--spacing-xl);
+}
+
+.team-card {
+    background-color: var(--color-background);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border-light);
+}
+
+.team-card p {
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+}
+
+.team-card ul {
+    list-style: disc;
+    margin-left: var(--spacing-lg);
+}
+
+.team-card li {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text);
+}
+
+/* Timeline Updates */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 12px;
+    width: 2px;
+    height: calc(100% - 12px);
+    background-color: var(--color-accent);
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Content Sections */
+.content-section {
+    padding: var(--spacing-xl) 0;
+}
+
+/* Cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--color-background);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Fix text color in cards */
+.card p {
+    color: var(--color-text);
+}
+
+.timeline-item .content p {
+    color: var(--color-text);
+}

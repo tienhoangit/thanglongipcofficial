@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Liên hệ với Thăng Long IPC để được tư vấn về sản phẩm cọc bê tông, dịch vụ ép cọc, và các giải pháp nền móng.">
+    <title>Liên Hệ | Thăng Long IPC</title>
+    
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Liên Hệ | Thăng Long IPC">
+    <meta property="og:description" content="Liên hệ ngay để được tư vấn chi tiết">
+    <meta property="og:url" content="https://thanglongipc.com/contact.html">
+</head>
+<body>
+    <!-- Thay thế header hiện tại bằng placeholder -->
+    <div id="header-placeholder"></div>
+    <script src="assets/js/components.js"></script>
+
+    <main>
+        <section class="page-header contact-hero">
+            <div class="container">
+                <h1>Liên Hệ</h1>
+                <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Thông Tin Liên Hệ</h2>
+                        
+                        <div class="info-group">
+                            <div class="info-icon">
+                                <i class="icon-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Điện Thoại</h3>
+                                <p><a href="tel:02439517151">024.3951 7151</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-group">
+                            <div class="info-icon">
+                                <i class="icon-email"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Email</h3>
+                                <p><a href="mailto:thanglongipc@gmail.com">thanglongipc@gmail.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-group">
+                            <div class="info-icon">
+                                <i class="icon-location"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Trụ Sở Chính</h3>
+                                <p>7B/D TTTC2, Xuân Tảo, Bắc Từ Liêm, Hà Nội</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-group">
+                            <div class="info-icon">
+                                <i class="icon-factory"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Xưởng Sản Xuất</h3>
+                                <p>Đối diện cầu B29, Hải Bối, Đông Anh, Hà Nội</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bank-info">
+                            <h3>Tài khoản ngân hàng</h3>
+                            <ul class="bank-list">
+                                <li>
+                                    <div class="bank-name">BIDV</div>
+                                    <div class="bank-number">21510000086236</div>
+                                </li>
+                                <li>
+                                    <div class="bank-name">ABBank</div>
+                                    <div class="bank-number">1341008046080</div>
+                                </li>
+                                <li>
+                                    <div class="bank-name">TPBank</div>
+                                    <div class="bank-number">91999919701</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h2>Gửi Yêu Cầu</h2>
+                        <p class="form-description">Điền thông tin bên dưới, chúng tôi sẽ liên hệ lại với bạn sớm nhất có thể</p>
+                        
+                        <form
+                            id="contactForm"
+                            action="https://formspree.io/f/xdkgkrzw"
+                            method="POST"
+                            class="form-validate"
+                        >
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="ho-ten">Họ tên <span class="required">*</span></label>
+                                    <input type="text" id="ho-ten" name="Họ tên" required
+                                        placeholder="Nhập họ tên của bạn">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="so-dien-thoai">Số điện thoại <span class="required">*</span></label>
+                                    <input type="tel" id="so-dien-thoai" name="Số điện thoại" required
+                                        placeholder="Nhập số điện thoại">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="Email"
+                                    placeholder="Nhập địa chỉ email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="chu-de">Chủ đề <span class="required">*</span></label>
+                                <select id="chu-de" name="Chủ đề" required>
+                                    <option value="">Chọn chủ đề</option>
+                                    <option value="bao-gia">Yêu cầu báo giá</option>
+                                    <option value="tu-van">Tư vấn kỹ thuật</option>
+                                    <option value="dat-hang">Đặt hàng</option>
+                                    <option value="khac">Khác</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="noi-dung">Nội dung <span class="required">*</span></label>
+                                <textarea id="noi-dung" name="Nội dung" required
+                                    placeholder="Nhập nội dung yêu cầu" rows="5"></textarea>
+                            </div>
+
+                            <!-- Honeypot field to prevent spam -->
+                            <div class="form-group" style="display:none">
+                                <label for="website">Website</label>
+                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Gửi yêu cầu</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2>Bản Đồ</h2>
+                <div class="map-container">
+                    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723!2d105.7881!3d21.115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDA2JzU0LjAiTiAxMDXCsDQ3JzE3LjIiRQ!5e0!3m2!1svi!2s!4v1620123456789!5m2!1svi!2s"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
