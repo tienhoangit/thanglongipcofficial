@@ -1,5 +1,0 @@
-name = "thanglongipcworkerthanglongipcworker" # Tên Worker của bạn
-compatibility_date = "2025-05-08"
-
-[site]
-bucket = "./src" # Đường dẫn tới thư mục chứa file tĩnh (HTML, CSS, JS)
