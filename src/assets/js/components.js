@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Đường dẫn gốc (thay đổi tùy theo độ sâu thư mục)
         const basePath = isInSubfolder ? '../../' : './';
-        // const pagesPath = isInSubfolder ? '../' : 'pages/';
+        const pagesPath = isInSubfolder ? '../' : 'pages/';
         
         // Cập nhật đường dẫn cho logo và hình ảnh
         const logoLink = document.getElementById('logo-link');
