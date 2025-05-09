@@ -1,0 +1,7 @@
+# Redirect vĩnh viễn gốc site → src/pages/index.html
+/    /src/index.html    301
+/about.html    /src/about.html    301
+/contact.html    /src/contact.html    301
+/pages/products/index.html    /src/pages/products/index.html    301
+/pages/project/index.html    /src/pages/project/index.html    301
+
