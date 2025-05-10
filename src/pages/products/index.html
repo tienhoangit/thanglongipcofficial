@@ -31,12 +31,12 @@
             background-color: #fff;
         }
         
-        .container {
+        /* .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
-        }
+        } */
         
         /* Header styling */
         .main-header {
@@ -106,7 +106,7 @@
         }
         
         /* Process steps styling */
-        .process-steps {
+        /* .process-steps {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
@@ -122,14 +122,14 @@
             position: relative;
             overflow: hidden;
             border-top: 4px solid var(--primary-color);
-        }
+        } */
         
-        .step:hover {
+        /* .step:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-        }
+        } */
         
-        .step .step-number {
+        /* .step .step-number {
             position: absolute;
             top: 15px;
             right: 15px;
@@ -150,7 +150,7 @@
             font-size: 1.3rem;
             margin-bottom: 20px;
             padding-right: 40px; /* Space for the number */
-        }
+        /* }
         
         .step p {
             color: #555;
@@ -166,7 +166,7 @@
             display: inline-block;
             position: absolute;
             left: 0;
-        }
+        }  */
         
         /* Feature boxes styling */
         .feature-boxes {
@@ -309,28 +309,6 @@
             color: var(--accent-color);
         }
         
-        /* CTA section styling */
-        .cta {
-            background: linear-gradient(135deg, var(--accent-color), #f7a665);
-            color: white;
-            padding: 70px 0;
-            text-align: center;
-            margin-top: 50px;
-        }
-        
-        .cta h2 {
-            font-size: 2.2rem;
-            margin-bottom: 30px;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.15);
-        }
-        
-        .cta-grid {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
         .btn {
             display: inline-block;
             padding: 14px 32px;
@@ -367,57 +345,8 @@
             transform: translateY(-3px);
         }
         
-        /* Footer styling */
-        .main-footer {
-            background-color: #1a2a66;
-            color: white;
-            padding: 60px 0 40px;
-        }
         
-        .footer-grid {
-            display: grid;
-            gap: 30px;
-        }
-        
-        .footer-info h4 {
-            color: var(--accent-color);
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-        }
-        
-        .footer-info h5 {
-            color: #ccc;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        
-        .contact-list {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 25px;
-        }
-        
-        .contact-list li {
-            margin-bottom: 12px;
-        }
-        
-        .contact-list a {
-            color: white;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .contact-list a:hover {
-            color: var(--accent-color);
-        }
-        
-        address {
-            font-style: normal;
-            color: #ddd;
-            line-height: 1.6;
-        }
-        
-        @media (max-width: 768px) {
+        /* @media (max-width: 768px) {
             .page-header {
                 padding: 60px 0 40px;
             }
@@ -437,8 +366,199 @@
             .benefits-list {
                 grid-template-columns: 1fr;
             }
+        } */
+    </style>
+    
+    <style>
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding-bottom: 50px;
+        }
+        
+        .card {
+            background-color: #FFF5EB; /* Nền cam nhạt hơn bên trong card */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            padding: 30px;
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #294099; /* Chữ xanh đậm - updated */
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        h1:after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background-color: #f58433; /* Đường gạch chân cam - updated */
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .step, .press-step-slide {
+            display: none;
+            padding: 0 15px;
+        }
+        
+        .step.active, .press-step-slide.active {
+            display: block;
+        }
+        
+        h2, h3 {
+            color: #294099; /* Chữ xanh đậm - updated */
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 .step-number, h3 .step-number {
+            background-color: #294099; /* Nền xanh đậm - updated */
+            color: white;
+            width: 35px;
+            height: 35px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            color: #294099; /* Chữ xanh đậm - updated */
+        }
+        
+        .image-container {
+            margin: 20px 0;
+            text-align: center;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .step-image {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .step-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .progress-bar {
+            height: 5px;
+            background-color: #FFD0A9; /* Màu cam nhạt hơn */
+            position: relative;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+        
+        .progress {
+            position: absolute;
+            height: 100%;
+            background-color: #294099; /* Màu xanh đậm - updated */
+            border-radius: 5px;
+            width: 0%;
+            transition: width 0.5s ease-in-out;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        button {
+            background-color: #294099; /* Nút xanh đậm - updated */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #3a51ac; /* Xanh đậm sáng hơn khi hover - updated */
+        }
+        
+        button:disabled {
+            background-color: #AABBCC;
+            cursor: not-allowed;
+        }
+        
+        .image-caption {
+            font-style: italic;
+            color: #294099; /* Chữ xanh đậm - updated */
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        .timestamp {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #294099; /* Chữ xanh đậm - updated */
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            
+            h1, .section-title {
+                font-size: 1.8rem;
+            }
+            
+            h2, h3 {
+                font-size: 1.3rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .hero {
+                height: 250px;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+                max-width: 90%;
+            }
         }
     </style>
+
 </head>
 <body>
     <!-- Thay thế header hiện tại bằng placeholder -->
@@ -450,85 +570,92 @@
         <section class="page-header">
             <div class="container">
                 <h1>Sản Phẩm & Dịch Vụ</h1>
-                <p>Trình bày rõ quy trình, năng lực và công nghệ trong sản xuất cọc BTCT đúc sẵn và thi công ép cọc PHC, nhằm khẳng định uy tín, chất lượng và thuyết phục khách hàng doanh nghiệp.</p>
+                <!-- <p>Trình bày rõ quy trình, năng lực và công nghệ trong sản xuất cọc BTCT đúc sẵn và thi công ép cọc PHC, nhằm khẳng định uy tín, chất lượng và thuyết phục khách hàng doanh nghiệp.</p> -->
             </div>
         </section>
 
-        <section class="product-section">
+        <sectio class="product-section">
             <div class="container">
                 <h2>Sản xuất cọc BTCT đúc sẵn</h2>
                 <div class="section-intro">
                     <p>Xưởng sản xuất rộng 4.000 m², trang bị trạm trộn bê tông khép kín công suất 25 m³/h, cẩu trục dầm đơn 18 m tải 7,5 tấn cùng hệ thống máy xúc, máy hàn, máy cắt và máy uốn thép tự động.</p>
                 </div>
-                
-                <div class="process-steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Tiếp nhận yêu cầu và tư vấn</h3>
-                        <p>Nhận bản vẽ kỹ thuật và thông số tải trọng</p>
-                        <p>Đề xuất loại cọc phù hợp (vuông hoặc tròn ly tâm)</p>
-                        <p>Tư vấn kích thước (200×200 → 350×350 mm, dài 6–12 m)</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Chuẩn bị nguyên liệu</h3>
-                        <p>Xi măng mác cao (≥42,5)</p>
-                        <p>Cốt liệu cát đá đạt chuẩn TCVN</p>
-                        <p>Thép Việt Đức CB300–CB400</p>
-                        <p>Phụ gia chống co ngót, đảm bảo độ dẻo và liên kết</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Gia công lồng thép</h3>
-                        <p>Cắt, uốn và lắp đặt thép chịu lực theo bản vẽ</p>
-                        <p>Kiểm tra độ thẳng và vị trí liên kết</p>
-                        <p>Đảm bảo chính xác ±1 mm</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">4</div>
-                        <h3>Lắp dựng ván khuôn</h3>
-                        <p>Ván khuôn bằng thép/alumin định hình</p>
-                        <p>Phun lớp tách khuôn để bảo quản bề mặt cọc</p>
-                        <p>Đảm bảo kín khít và đồng đều</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">5</div>
-                        <h3>Trộn và đổ bê tông</h3>
-                        <p>Máy trộn khép kín định lượng xi măng, cốt liệu và phụ gia</p>
-                        <p>Đổ bê tông theo tầng</p>
-                        <p>Sử dụng đầm rung loại bỏ bọt khí, tăng độ đầm đặc</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">6</div>
-                        <h3>Bảo dưỡng cọc</h3>
-                        <p>Dưỡng hộ ẩm trong phòng kiểm soát nhiệt độ 20–25°C</p>
-                        <p>Duy trì độ ẩm ≥95%</p>
-                        <p>Thời gian ít nhất 21 ngày</p>
-                        <p>Để bê tông đạt cường độ ≥40 MPa</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">7</div>
-                        <h3>Kiểm định chất lượng</h3>
-                        <p>Lấy mẫu thử nén</p>
-                        <p>Đo kích thước, độ thẳng và mẫu cắt ngang</p>
-                        <p>Kiểm tra độ cứng</p>
-                        <p>Lập biên bản nghiệm thu khi đạt 100% tiêu chuẩn</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">8</div>
-                        <h3>Đóng kiện và vận chuyển</h3>
-                        <p>Đóng cọc lên pallet</p>
-                        <p>Bọc màng PE và cố định chắc chắn</p>
-                        <p>Sẵn sàng vận chuyển đến công trường</p>
-                    </div>
+                <!-- Pile Production Section -->
+        <div class="card">
+            <h1>Quy Trình Sản Xuất Cọc</h1>
+            
+            <div class="step active" id="step1">
+                <h2><span class="step-number">1</span> Chuẩn bị nguyên vật liệu</h2>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1518228684090-47bafaeef685?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Nguyên vật liệu sản xuất cọc" class="step-image">
+                    <p class="image-caption">Nguyên vật liệu: Xi măng, cát, đá, nước và thép</p>
                 </div>
+                <ul>
+                    <li>Xi măng, cát, đá, nước và thép cần đảm bảo chất lượng theo tiêu chuẩn kỹ thuật hiện hành.</li>
+                    <li>Nguyên vật liệu phải được kiểm tra và thí nghiệm trước khi sử dụng để đảm bảo phù hợp với yêu cầu thiết kế.</li>
+                </ul>
+            </div>
+            
+            <div class="step" id="step2">
+                <h2><span class="step-number">2</span> Gia công và lắp đặt cốt thép</h2>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1550427676-5ac15eee11f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Gia công cốt thép" class="step-image">
+                    <p class="image-caption">Gia công và lắp đặt cốt thép cho cọc</p>
+                </div>
+                <ul>
+                    <li>Cốt thép chủ được nắn thẳng và cắt theo kích thước thiết kế.</li>
+                    <li>Thép đai được uốn và cắt đúng kích thước, sau đó liên kết với thép chủ bằng dây buộc.</li>
+                    <li>Lồng thép được lắp ráp và định vị chắc chắn trong khuôn, đảm bảo không xê dịch khi đổ bê tông.</li>
+                </ul>
+            </div>
+            
+            <div class="step" id="step3">
+                <h2><span class="step-number">3</span> Chuẩn bị và lắp đặt ván khuôn</h2>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Lắp đặt ván khuôn" class="step-image">
+                    <p class="image-caption">Chuẩn bị và lắp đặt ván khuôn cho cọc</p>
+                </div>
+                <ul>
+                    <li>Ván khuôn phải sạch, phẳng và được bôi lớp chống dính để dễ tháo dỡ.</li>
+                    <li>Khuôn được lắp đặt chắc chắn, đảm bảo đúng hình dạng và kích thước của cọc theo thiết kế.</li>
+                </ul>
+            </div>
+            
+            <div class="step" id="step4">
+                <h2><span class="step-number">4</span> Trộn và đổ bê tông</h2>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1545463598-bd5e8914f8f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Đổ bê tông" class="step-image">
+                    <p class="image-caption">Quá trình trộn và đổ bê tông vào khuôn cọc</p>
+                </div>
+                <ul>
+                    <li>Bê tông được trộn theo tỷ lệ cấp phối phù hợp, đảm bảo độ sụt và cường độ theo yêu cầu.</li>
+                    <li>Đổ bê tông liên tục vào khuôn, sử dụng máy đầm để đảm bảo bê tông được nén chặt, tránh rỗ tổ ong.</li>
+                </ul>
+            </div>
+            
+            <div class="step" id="step5">
+                <h2><span class="step-number">5</span> Bảo dưỡng bê tông</h2>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1541855110756-0ca6200935b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bảo dưỡng bê tông" class="step-image">
+                    <p class="image-caption">Quá trình bảo dưỡng bê tông sau khi đúc cọc</p>
+                </div>
+                <ul>
+                    <li>Bảo dưỡng bắt đầu sau khi bê tông se mặt, thường từ 4–6 giờ sau khi đổ.</li>
+                    <li>Duy trì độ ẩm cho bê tông liên tục trong 7 ngày để đảm bảo cường độ và chất lượng.</li>
+                </ul>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            
+            <div class="nav-buttons">
+                <button id="prevBtn" disabled>Trước</button>
+                <button id="autoBtn">Tự động chạy</button>
+                <button id="nextBtn">Tiếp</button>
+            </div>
+          
+        </div>
 
                 <div class="specs-container">
                     <h3 class="specs-title">Thông số nổi bật</h3>
@@ -632,57 +759,74 @@
                     </div>
                 </div>
 
-                <div class="process-steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Khảo sát & đánh giá địa chất</h3>
-                        <p>Lấy mẫu đất</p>
-                        <p>Đo cao độ</p>
-                        <p>Xác định phương án ép phù hợp</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Lập phương án kỹ thuật</h3>
-                        <p>Xác định vị trí, số lượng cọc</p>
-                        <p>Lựa chọn loại cọc phù hợp</p>
-                        <p>Chọn thiết bị thi công</p>
-                        <p>Lập biện pháp an toàn</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Chuẩn bị công trường</h3>
-                        <p>Xây dựng bệ máy</p>
-                        <p>Neo cố định thiết bị</p>
-                        <p>Tập kết cọc và vật tư</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">4</div>
-                        <h3>Thi công ép cọc</h3>
-                        <p>Ép cọc theo tiêu chuẩn kỹ thuật</p>
-                        <p>Ghi nhật ký ép chi tiết</p>
-                        <p>Kiểm soát áp lực và vận tốc</p>
-                        <p>Đảm bảo độ sâu theo yêu cầu</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">5</div>
-                        <h3>Giám sát & đo lún</h3>
-                        <p>Sử dụng cảm biến chuyên dụng</p>
-                        <p>Theo dõi thời gian thực</p>
-                        <p>Đảm bảo độ ổn định và chính xác</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">6</div>
-                        <h3>Nghiệm thu & bàn giao</h3>
-                        <p>Thử tải kiểm tra khả năng chịu lực</p>
-                        <p>Nghiệm thu công trình với biên bản chi tiết</p>
-                        <p>Bàn giao hồ sơ kỹ thuật đầy đủ</p>
-                    </div>
+                <!-- Pile Pressing Section -->
+        <div class="card">
+            <h1>Quy Trình Ép Cọc</h1>
+            
+            <div class="press-step-slide active" id="pressStep1">
+                <h3><span class="step-number">1</span> Chuẩn bị trước khi ép cọc</h3>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Chuẩn bị trước khi ép cọc" class="step-image">
+                    <p class="image-caption">Công tác khảo sát địa hình và chuẩn bị mặt bằng</p>
                 </div>
+                <ul>
+                    <li><strong>Khảo sát địa hình, địa chất:</strong> Xác định đặc điểm lớp đất để lựa chọn loại cọc và thiết bị ép phù hợp.</li>
+                    <li><strong>Chuẩn bị mặt bằng thi công:</strong> San phẳng, tạo lối đi cho máy móc, đảm bảo không bị lún sụt.</li>
+                    <li><strong>Tập kết vật tư:</strong> Gồm cọc bê tông, thiết bị ép (ép tải, ép thủy lực...), và các dụng cụ hỗ trợ.</li>
+                </ul>
+            </div>
+            
+            <div class="press-step-slide" id="pressStep2">
+                <h3><span class="step-number">2</span> Lắp đặt máy ép và định vị cọc</h3>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1591955506264-3f5a6834570a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Lắp đặt máy ép" class="step-image">
+                    <p class="image-caption">Lắp đặt thiết bị ép và định vị cọc</p>
+                </div>
+                <ul>
+                    <li><strong>Lắp đặt máy ép</strong> đúng vị trí theo thiết kế, đảm bảo ổn định.</li>
+                    <li><strong>Định vị cọc</strong> bằng cách xác định tim cọc và điều chỉnh thẳng đứng bằng dụng cụ chuyên dụng (ni vô, dây dọi...).</li>
+                </ul>
+            </div>
+            
+            <div class="press-step-slide" id="pressStep3">
+                <h3><span class="step-number">3</span> Ép cọc</h3>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ép cọc" class="step-image">
+                    <p class="image-caption">Quá trình ép cọc bằng máy thủy lực</p>
+                </div>
+                <ul>
+                    <li><strong>Ép đoạn cọc đầu tiên:</strong> Hạ từ từ, kiểm tra độ thẳng đứng, sau đó tiến hành ép bằng lực thủy lực hoặc đối trọng.</li>
+                    <li><strong>Ép nối cọc (nếu cần):</strong> Khi chiều sâu thiết kế lớn, cần nối thêm đoạn cọc bằng hàn hoặc bản mã, sau đó tiếp tục ép.</li>
+                    <li><strong>Ghi nhận lực ép và độ sâu:</strong> Ghi lực ép cuối cùng và chiều sâu mỗi cọc để đối chiếu với thiết kế.</li>
+                </ul>
+            </div>
+            
+            <div class="press-step-slide" id="pressStep4">
+                <h3><span class="step-number">4</span> Kết thúc ép và nghiệm thu</h3>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Nghiệm thu cọc" class="step-image">
+                    <p class="image-caption">Kiểm tra và nghiệm thu cọc sau khi ép</p>
+                </div>
+                <p><strong>Dừng ép khi đạt:</strong></p>
+                <ul>
+                    <li>Chiều sâu thiết kế hoặc</li>
+                    <li>Lực ép lớn hơn lực ép tiêu chuẩn trong một khoảng chiều sâu nhất định (tuỳ theo quy định).</li>
+                </ul>
+                <p><strong>Kiểm tra và nghiệm thu:</strong> Kiểm tra vị trí, độ sâu, độ nghiêng và chất lượng mối nối.</p>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress" id="pressProgress"></div>
+            </div>
+            
+            <div class="nav-buttons">
+                <button id="pressPrevBtn" disabled>Trước</button>
+                <button id="pressAutoBtn">Tự động chạy</button>
+                <button id="pressNextBtn">Tiếp</button>
+            </div>
+            
+        </div>
+    </div>
 
                 <div class="benefits">
                     <h3>Lợi ích dịch vụ</h3>
@@ -730,5 +874,214 @@
     <div id="footer-placeholder"></div>
 
     <script src="../../assets/js/main.js" defer></script>
+    <script>
+        // Variables for Production Section
+        let currentStep = 1;
+        const totalSteps = 5;
+        let autoAdvanceTimer;
+        const autoAdvanceDelay = 6000; // 6 seconds
+        let isAutoRunning = true;
+        
+        // Variables for Pressing Section
+        let currentPressStep = 1;
+        const totalPressSteps = 4;
+        let pressAutoAdvanceTimer;
+        let isPressAutoRunning = true;
+        
+        // Functions for Production Section
+        function updateStep(step) {
+            // Hide all steps
+            document.querySelectorAll('.step').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Show current step
+            document.getElementById('step' + step).classList.add('active');
+            
+            // Update progress bar
+            const progressPercentage = ((step - 1) / (totalSteps - 1)) * 100;
+            document.getElementById('progress').style.width = progressPercentage + '%';
+            
+            // Update buttons
+            document.getElementById('prevBtn').disabled = step === 1;
+            document.getElementById('nextBtn').disabled = step === totalSteps;
+            
+            // Update auto button text
+            updateAutoButtonText();
+            
+            // Reset auto advance timer if auto is running
+            if (isAutoRunning) {
+                resetAutoAdvance();
+            }
+        }
+        
+        function nextStep() {
+            if (currentStep < totalSteps) {
+                currentStep++;
+                updateStep(currentStep);
+            } else if (isAutoRunning) {
+                // Loop back to first step when reached the end (only in auto mode)
+                currentStep = 1;
+                updateStep(currentStep);
+            }
+        }
+        
+        function prevStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                updateStep(currentStep);
+            }
+        }
+        
+        function toggleAutoAdvance() {
+            isAutoRunning = !isAutoRunning;
+            updateAutoButtonText();
+            
+            if (isAutoRunning) {
+                startAutoAdvance();
+            } else {
+                clearTimeout(autoAdvanceTimer);
+            }
+        }
+        
+        function updateAutoButtonText() {
+            const autoBtn = document.getElementById('autoBtn');
+            autoBtn.textContent = isAutoRunning ? "Dừng tự động" : "Tự động chạy";
+            autoBtn.style.backgroundColor = isAutoRunning ? "#f58433" : "#294099";
+        }
+        
+        function startAutoAdvance() {
+            clearTimeout(autoAdvanceTimer);
+            autoAdvanceTimer = setTimeout(() => {
+                nextStep();
+            }, autoAdvanceDelay);
+        }
+        
+        function resetAutoAdvance() {
+            clearTimeout(autoAdvanceTimer);
+            if (isAutoRunning) {
+                startAutoAdvance();
+            }
+        }
+        
+        // Functions for Pressing Section
+        function updatePressStep(step) {
+            // Hide all steps
+            document.querySelectorAll('.press-step-slide').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Show current step
+            document.getElementById('pressStep' + step).classList.add('active');
+            
+            // Update progress bar
+            const progressPercentage = ((step - 1) / (totalPressSteps - 1)) * 100;
+            document.getElementById('pressProgress').style.width = progressPercentage + '%';
+            
+            // Update buttons
+            document.getElementById('pressPrevBtn').disabled = step === 1;
+            document.getElementById('pressNextBtn').disabled = step === totalPressSteps;
+            
+            // Update auto button text
+            updatePressAutoButtonText();
+            
+            // Reset auto advance timer if auto is running
+            if (isPressAutoRunning) {
+                resetPressAutoAdvance();
+            }
+        }
+        
+        function nextPressStep() {
+            if (currentPressStep < totalPressSteps) {
+                currentPressStep++;
+                updatePressStep(currentPressStep);
+            } else if (isPressAutoRunning) {
+                // Loop back to first step when reached the end (only in auto mode)
+                currentPressStep = 1;
+                updatePressStep(currentPressStep);
+            }
+        }
+        
+        function prevPressStep() {
+            if (currentPressStep > 1) {
+                currentPressStep--;
+                updatePressStep(currentPressStep);
+            }
+        }
+        
+        function togglePressAutoAdvance() {
+            isPressAutoRunning = !isPressAutoRunning;
+            updatePressAutoButtonText();
+            
+            if (isPressAutoRunning) {
+                startPressAutoAdvance();
+            } else {
+                clearTimeout(pressAutoAdvanceTimer);
+            }
+        }
+        
+        function updatePressAutoButtonText() {
+            const pressAutoBtn = document.getElementById('pressAutoBtn');
+            pressAutoBtn.textContent = isPressAutoRunning ? "Dừng tự động" : "Tự động chạy";
+            pressAutoBtn.style.backgroundColor = isPressAutoRunning ? "#f58433" : "#294099";
+        }
+        
+        function startPressAutoAdvance() {
+            clearTimeout(pressAutoAdvanceTimer);
+            pressAutoAdvanceTimer = setTimeout(() => {
+                nextPressStep();
+            }, autoAdvanceDelay);
+        }
+        
+        function resetPressAutoAdvance() {
+            clearTimeout(pressAutoAdvanceTimer);
+            if (isPressAutoRunning) {
+                startPressAutoAdvance();
+            }
+        }
+        
+        // Event Listeners for Production Section
+        document.getElementById('nextBtn').addEventListener('click', nextStep);
+        document.getElementById('prevBtn').addEventListener('click', prevStep);
+        document.getElementById('autoBtn').addEventListener('click', toggleAutoAdvance);
+        
+        // Event Listeners for Pressing Section
+        document.getElementById('pressNextBtn').addEventListener('click', nextPressStep);
+        document.getElementById('pressPrevBtn').addEventListener('click', prevPressStep);
+        document.getElementById('pressAutoBtn').addEventListener('click', togglePressAutoAdvance);
+        
+        // Preload images
+        function preloadImages() {
+            const imageUrls = [
+                "https://images.unsplash.com/photo-1518228684090-47bafaeef685?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                "https://images.unsplash.com/photo-1550427676-5ac15eee11f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                "https://images.unsplash.com/photo-1545463598-bd5e8914f8f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                "https://images.unsplash.com/photo-1541855110756-0ca6200935b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                "https://images.unsplash.com/photo-1591955506264-3f5a6834570a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            ];
+            
+            imageUrls.forEach((url) => {
+                const img = new Image();
+                img.src = url;
+            });
+        }
+        
+        // Start auto-advance when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Production Section
+            updateStep(currentStep);
+            startAutoAdvance();
+            
+            // Initialize Pressing Section
+            updatePressStep(currentPressStep);
+            startPressAutoAdvance();
+            
+            preloadImages();
+        });
+    </script>
 </body>
 </html>

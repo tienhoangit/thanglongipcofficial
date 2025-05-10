@@ -8,18 +8,9 @@
     <meta name="keywords" content="Thăng Long IPC, cọc bê tông, thi công ép cọc, xây dựng công nghiệp">
     <title>Thăng Long IPC - Trang Chủ</title>
     
-    <!-- Giữ lại favicon -->
-    <link rel="icon" href="assets/images/favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#27409A">
-    <meta name="theme-color" content="#27409A">
-    
     <!-- Thêm Tailwind và fonts mới -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400&display=swap&subset=vietnamese" rel="stylesheet">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Thăng Long IPC - Công ty CP Sản xuất Công nghiệp & Xây dựng">
@@ -63,23 +54,6 @@
         }
         h1, h2, h3 {
             font-family: 'Poppins', sans-serif;
-        }
-        .banner {
-            background-image: url('assets/images/company/san-xuat-coc-btct.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 50vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        @media (min-width: 768px) {
-            .banner {
-                height: 700px;
-            }
         }
         .section-title {
             position: relative;
@@ -167,10 +141,19 @@
     <main>
         <!-- Banner -->
         <section class="banner">
-            <div class="max-w-4xl mx-auto px-6">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">Kiến tạo nền móng vững chắc – Dựng xây niềm tin dài lâu</h2>
-                <p class="text-lg md:text-xl mb-8">Chào mừng đến với Thăng Long IPC – 20 năm kinh nghiệm mang đến giải pháp móng vững chắc, an toàn và tiết kiệm chi phí cho nhà đầu tư.</p>
-                <a href="#" class="cta-button inline-block">Khám Phá Dịch Vụ</a>
+            <div class="max-w-4xl mx-auto px-6 pt-80">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight text-white">NƠI MỌI CÔNG TRÌNH VỮNG BỀN</h2>
+            <p class="typing-container">
+                <span id="typing-text"></span>
+            </p>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section class="py-16 introduction-section">
+            <div class="container mx-auto px-6">
+            <p class="mt-10 text-xl text-center font-bold">
+                Thăng Long IPC là đơn vị tiên phong trong sản xuất cọc bê tông cốt thép và thi công ép cọc nền móng tại Việt Nam</p>
             </div>
         </section>
 
@@ -192,7 +175,7 @@
                     <div class="card rounded-xl p-6 text-center">
                         <img src="assets/images/company/co-so-ha-tang.jpg" alt="Cơ sở hạ tầng mạnh" class="mx-auto mb-4 h-16 object-cover rounded" loading="lazy">
                         <h3 class="text-xl font-semibold mb-2 text-[var(--color-primary)]">Cơ Sở Hạ Tầng Mạnh</h3>
-                        <p class="text-gray-600">Nhà xưởng 4.000 m², kho kín 1.000 m², trạm trộn bê tông 25 m³/h.</p>
+                        <p class="text-gray-600">Nhà xưởng trên 4.000 m², kho kín trên 1.000 m², trạm trộn bê tông hơn 25 m³/h.</p>
                     </div>
                 </div>
             </div>
@@ -204,7 +187,7 @@
                 <h2 class="text-3xl font-bold text-center section-title">Dự Án Tiêu Biểu</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                     <div class="card rounded-xl overflow-hidden">
-                        <img src="assets/images/projects/hai-an.jpg" alt="Kho lạnh Hải An" class="w-full h-48 object-cover" loading="lazy">
+                        <img src="assets/images/projects/kho-lanh-hai-an.jpg" alt="Kho lạnh Hải An" class="w-full h-48 object-cover" loading="lazy">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2 text-[var(--color-primary)]">Kho lạnh Hải An – Hải Phòng</h3>
                             <p class="text-gray-600 mb-2">2021–2022: Cọc PHC D300/D400</p>
@@ -236,7 +219,7 @@
                         </div>
                     </div>
                     <div class="card rounded-xl overflow-hidden">
-                        <img src="assets/images/projects/spk.jpg" alt="Nhà máy SPK" class="w-full h-48 object-cover" loading="lazy">
+                        <img src="assets/images/projects/spk-hai-duong.jpg" alt="Nhà máy SPK" class="w-full h-48 object-cover" loading="lazy">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2 text-[var(--color-primary)]">Nhà máy SPK – Hải Dương</h3>
                             <p class="text-gray-600 mb-2">2017: Cọc BTCT 200×200 mm</p>

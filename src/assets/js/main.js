@@ -191,3 +191,109 @@ const showMessage = (type, message) => {
         setTimeout(() => messageDiv.remove(), 300);
     }, 3000);
 };
+
+// Thêm vào file main.js
+document.addEventListener('DOMContentLoaded', function() {
+    const banner = document.querySelector('.banner');
+    if (!banner) return;
+    
+    // Phát hiện iOS
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    
+    if (isIOS) {
+        // Tạo giải pháp thay thế cho iOS
+        banner.classList.add('ios-fixed');
+        
+        // Tạo container cho ảnh nền
+        const bgContainer = document.createElement('div');
+        bgContainer.className = 'ios-bg-container';
+        
+        // Tạo phần tử ảnh nền
+        const bgImage = document.createElement('div');
+        bgImage.className = 'ios-bg-image';
+        bgImage.style.backgroundImage = "url('assets/images/company/robot-sunward.jpg')";
+        
+        // Thêm vào DOM
+        bgContainer.appendChild(bgImage);
+        banner.insertBefore(bgContainer, banner.firstChild);
+        
+        // Xử lý sự kiện cuộn
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+        
+        window.addEventListener('scroll', function() {
+            lastScrollY = window.scrollY;
+            
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    // Tính toán vị trí mới cho ảnh nền
+                    const bannerRect = banner.getBoundingClientRect();
+                    const viewportHeight = window.innerHeight;
+                    
+                    // Chỉ áp dụng khi banner nằm trong viewport
+                    if (bannerRect.bottom > 0 && bannerRect.top < viewportHeight) {
+                        // Tỷ lệ hiển thị của banner trong viewport
+                        const visibleRatio = Math.min(1, (viewportHeight - bannerRect.top) / viewportHeight);
+                        
+                        // Di chuyển ảnh nền một chút để tạo hiệu ứng cố định
+                        bgImage.style.transform = `translateY(${bannerRect.top * 0.4}px)`;
+                    }
+                    
+                    ticking = false;
+                });
+                
+                ticking = true;
+            }
+        });
+    }
+});
+
+// Hiệu ứng gõ và xóa chữ 
+const texts = [
+    "Mỗi công trình vươn cao, bắt đầu từ những gì sâu nhất.",
+    "Chúng tôi chọn ở phía dưới – để công trình ở trên luôn vững.",
+    "Mỗi cây cọc là một sự hy sinh thầm lặng cho thành công phía trên.",
+    "Nền móng vững – giấc mơ mới đủ lớn để bay xa.",
+    "Không ai thấy, nhưng mọi thứ dựa vào chúng tôi.",
+    "Vững từ gốc, bền theo năm tháng.",
+    "Làm móng – để người khác làm kỳ tích"
+];
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingSpeed = 100; // Tốc độ gõ (ms)
+const deletingSpeed = 50; // Tốc độ xóa (ms)
+const delayBetween = 2000; // Thời gian chờ giữa các câu (ms)
+
+function type() {
+    const currentText = texts[textIndex];
+    const typingElement = document.getElementById('typing-text');
+
+    if (!isDeleting && charIndex < currentText.length) {
+        // Gõ chữ
+        typingElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+        setTimeout(type, typingSpeed);
+    } else if (isDeleting && charIndex > 0) {
+        // Xóa chữ
+        typingElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(type, deletingSpeed);
+    } else if (!isDeleting && charIndex === currentText.length) {
+        // Chờ trước khi xóa
+        setTimeout(() => {
+            isDeleting = true;
+            type();
+        }, delayBetween);
+    } else if (isDeleting && charIndex === 0) {
+        // Chuyển sang câu tiếp theo
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        setTimeout(type, typingSpeed);
+    }
+}
+
+// Bắt đầu hiệu ứng
+document.addEventListener('DOMContentLoaded', () => {
+    type();
+});
