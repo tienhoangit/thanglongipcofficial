@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cọc BTCT 200x200 - Thăng Long IPC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/variables.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/components/footer.css">
+    <style>
+        .product-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+
+        .product-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .product-header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--blue) 100%);
+            padding: 30px 20px;
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            color: #ffffff;
+            word-wrap: break-word;
+        }
+
+        .serial-number {
+            background: rgba(255,255,255,0.15);
+            padding: 10px 25px;
+            border-radius: 25px;
+            display: inline-block;
+            font-size: 1.2rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(5px);
+            color: #ffffff;
+            font-weight: 500;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+
+        .product-table {
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            border-collapse: collapse;
+            overflow: hidden;
+        }
+
+        .product-table th,
+        .product-table td {
+            padding: 25px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            font-size: 1.1rem;
+            word-wrap: break-word;
+        }
+
+        .product-table th {
+            background-color: var(--dark-blue);
+            color: white;
+            font-weight: 600;
+            width: 200px;
+            position: relative;
+            min-width: 150px;
+        }
+
+        .product-table td {
+            min-width: 200px;
+        }
+
+        .product-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .product-table tr:hover td {
+            background-color: #f8f9fa;
+        }
+
+        .product-table td strong {
+            color: var(--dark-blue);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+        }
+
+        .contact-item i {
+            font-size: 2.5rem;
+            color: #ff7f00;
+            margin-bottom: 15px;
+        }
+
+        .contact-item h4 {
+            color: var(--dark-blue);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .contact-item a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .contact-item a:hover {
+            color: #ff7f00;
+        }
+
+        @media (max-width: 768px) {
+            .product-header h1 {
+                font-size: 2rem;
+                padding: 0 10px;
+            }
+
+            .product-header {
+                padding: 20px 15px;
+            }
+
+            .serial-number {
+                font-size: 1rem;
+                padding: 8px 20px;
+            }
+
+            .product-table {
+                display: block;
+                width: 100%;
+            }
+
+            .product-table th,
+            .product-table td {
+                padding: 15px;
+                font-size: 1rem;
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+
+            .product-table th {
+                width: 100%;
+                min-width: unset;
+            }
+
+            .product-table td {
+                min-width: unset;
+            }
+
+            .product-table tr {
+                display: block;
+                margin-bottom: 15px;
+                border: 1px solid #eee;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            .product-table tr:last-child {
+                margin-bottom: 0;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .contact-item {
+                padding: 20px 15px;
+            }
+
+            .contact-item i {
+                font-size: 2rem;
+            }
+
+            .contact-item h4 {
+                font-size: 1.1rem;
+            }
+
+            .contact-item a {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .product-container {
+                padding: 0 15px;
+            }
+
+            .product-table th,
+            .product-table td {
+                padding: 12px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Product Section -->
+    <section class="product-section">
+        <div class="product-container">
+            <div class="product-header">
+                <h1>Cọc BTCT 200x200</h1>
+                <p class="serial-number">Serial: 26789268536</p>
+            </div>
+
+            <table class="product-table">
+                <tr>
+                    <th>Thông tin sản phẩm</th>
+                    <td>
+                        <strong>Cọc BTCT 200x200</strong>
+                        <strong>Thép chủ:</strong> 4D14 Việt Đức
+                        <strong>Bê tông:</strong> Mác 250#
+                        <strong>Loại cọc:</strong> Không lưới - bích thấp
+                    </td>
+                </tr>
+                <tr>
+                    <th>Đơn vị sản xuất</th>
+                    <td>CÔNG TY CỔ PHẦN SẢN XUẤT CÔNG NGHIỆP VÀ XÂY DỰNG THĂNG LONG</td>
+                </tr>
+                <tr>
+                    <th>Địa chỉ sản xuất</th>
+                    <td>Xưởng bê tông 11, Thôn Cổ Điển, xã Hải Bối, huyện Đông Anh, TP. Hà Nội</td>
+                </tr>
+            </table>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <a href="mailto:Thanglongipc@gmail.com">Thanglongipc@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <h4>Website</h4>
+                    <a href="https://thanglongipc.com" target="_blank">thanglongipc.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h4>Hotline</h4>
+                    <a href="tel:091">091</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script>
+        // Định nghĩa đường dẫn cơ sở cho components
+        const basePath = '../../';
+        
+        // Hàm tải component
+        function loadComponent(url, placeholderId) {
+            const placeholder = document.getElementById(placeholderId);
+            if (placeholder) {
+                fetch(basePath + url)
+                    .then(response => response.text())
+                    .then(data => {
+                        placeholder.innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error(`Error loading ${url}:`, error);
+                    });
+            }
+        }
+
+        // Tải header và footer
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('components/header.html', 'header-placeholder');
+            loadComponent('components/footer.html', 'footer-placeholder');
+        });
+    </script>
+</body>
+</html>
