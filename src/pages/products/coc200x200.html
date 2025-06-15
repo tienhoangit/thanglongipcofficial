@@ -287,31 +287,6 @@
     <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
-    <!-- Scripts -->
-    <script>
-        // Định nghĩa đường dẫn cơ sở cho components
-        const basePath = '../../';
-        
-        // Hàm tải component
-        function loadComponent(url, placeholderId) {
-            const placeholder = document.getElementById(placeholderId);
-            if (placeholder) {
-                fetch(basePath + url)
-                    .then(response => response.text())
-                    .then(data => {
-                        placeholder.innerHTML = data;
-                    })
-                    .catch(error => {
-                        console.error(`Error loading ${url}:`, error);
-                    });
-            }
-        }
-
-        // Tải header và footer
-        document.addEventListener('DOMContentLoaded', function() {
-            loadComponent('components/header.html', 'header-placeholder');
-            loadComponent('components/footer.html', 'footer-placeholder');
-        });
-    </script>
+    <script src="../../assets/js/components.js"></script>
 </body>
 </html>
